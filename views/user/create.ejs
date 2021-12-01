@@ -1,0 +1,29 @@
+
+<%- include('../partials/header.ejs') %>
+
+<link rel="stylesheet" href="css/login.css">
+
+<body>
+    
+    
+    <div class="box">
+
+
+        <div class="title">        
+            <h1>Registro</h1>
+        </div>
+        <hr>
+        <div class="forms">
+            <form method="POST" action="/user/create">
+                <input name="name" type="text" placeholder="Nome">
+                <input  name="email" type="email" placeholder="E-mail">
+                <input  name="password" type="password" placeholder="Senha">
+                <button>Criar conta</button>
+            </form>
+        </div>
+       
+    </div>
+
+</body>
+
+<%- include('../partials/footer.ejs') %>

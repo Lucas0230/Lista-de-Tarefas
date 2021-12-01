@@ -1,0 +1,88 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body, html {
+
+
+    background-image: url(/img/workspace-gfd0026f22_1920.jpg);
+    background-repeat: no no-repeat;
+    background-size: cover;
+    background-position: center top;
+    overflow: hidden;
+
+    background-color: rgba(255, 255, 255, 0.822);
+    
+}
+
+@font-face {
+    font-family: montserrat ;
+    src: url(/fonts/Montserrat-Thin.ttf);
+}
+
+@font-face {
+    font-family: oswald;
+    src: url(/fonts/Oswald-Light.ttf);
+}
+
+main h1{
+
+    color: white;
+    font-size: 13vh;
+    font-family: montserrat, sans-serif;
+}
+
+main p{
+
+    margin-left:  1vh;
+    font-family: oswald;
+    color: white;
+    font-size: 6vh;
+}
+
+main button{
+
+    width: 20vh;
+    height: 5vh;
+    margin: 11vh 0 0 1vh;
+    background-color: rgb(52, 207, 21);
+    color: white;
+    border-style: none;
+    border-radius: 1vh;
+
+    font-family: montserrat;
+    font-size: 2.5vh;
+    font-weight: bold;
+  
+}
+
+
+button:hover {
+
+    border: 1px solid white;
+    
+}
+
+.landingpage {
+
+    position: absolute;
+    width: 100vh;
+    height: 75vh;
+    margin: 30vh 0 0 8vh;
+
+}
+
+
+
+/* Página de login */
+
+.box-login {
+
+    width: 10vh;
+    height: 10vh;
+    background-color: red;
+}

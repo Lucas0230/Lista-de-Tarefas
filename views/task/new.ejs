@@ -1,0 +1,89 @@
+<%- include('../partials/header.ejs') %>
+
+<link rel="stylesheet" href="/css/index.css">
+
+
+<body>
+
+    <%- include('../partials/navbar.ejs') %>
+
+    
+    <div class="row">
+
+        <div class="col">
+
+            <div class="container mt-4">
+
+                
+                <h1>Criar tarefa</h1>
+                <br>
+
+                <div class="card">
+                    
+                    <div class="card-body">
+
+                        <form method="POST" action="/task/save/<%- list.id %>">
+
+                            <input class="form-control task_title" type="text" name="title" placeholder="Digite a tarefa">
+                            <br>
+                            <textarea class="form-control" placeholder="Descreva sua tarefa" name="body" cols="30" rows="3"></textarea>
+                            <br>
+                            
+                            <% lists.forEach( list=>{ %>
+
+                                <a href="/tasks/<%- list.slug %>">
+                            
+                                    <ol class="list-group list-group-numbered">            
+                                    
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">
+                                                        <%- list.title %>
+                                                    </div>
+                                                    <%- list.body %>
+                                                </div>
+                                                <span class="badge bg-primary rounded-pill">14</span>
+                                            </li>
+                                            <hr>
+                                            <input type="hidden" name="id" value="<%- list.id %>">
+                                    
+                                            
+                                    
+                                    
+                                    </ol>
+                            
+                                </a>
+                            
+                            <% }) %>
+        
+
+                            <button class="form-control">
+                                <img src="/img/icons8-soma-24.png" > 
+                                Adicionar
+                            </button>
+        
+                        </form>
+        
+
+                    </div>
+                </div>
+                
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+
+</body>
+
+
+
+
+
+
+<%- include('../partials/footer.ejs') %>

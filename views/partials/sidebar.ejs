@@ -1,0 +1,32 @@
+<h4 class="mt-3">Listas <a href="/list/new"><img src="/img/icons8-soma-24.png"></a></h4>
+<hr>
+
+
+<% lists.forEach( list=>{ %>
+
+    <a href="/tasks/<%- list.slug %>">
+
+        <ol class="list-group list-group-unnumbered">            
+        
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold"> 
+                            <%- list.title %>
+                        </div>
+                        <%- list.body %>
+                    </div>
+                    <a href="/list/delete/<%- list.id %>">
+                        <span class="badge rounded-pill">x</span>
+                    </a>
+                </li>
+                <hr>
+                <input type="hidden" name="id" value="<%- list.id %>">
+        
+                
+        
+        
+        </ol>
+
+    </a>
+
+<% }) %>
